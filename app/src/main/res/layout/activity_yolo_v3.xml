@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".YoloV3Activity">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Vision Assistant"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#1a73e8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Choose your detection mode"
+        android:textSize="16sp"
+        android:textColor="#5f6368"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_tv" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/stream_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="48dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/subtitle_tv">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stream_mb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:text="Live Stream Mode"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:icon="@drawable/stream_mode"
+            app:iconGravity="top"
+            app:iconPadding="16dp"
+            app:iconSize="48dp"
+            android:backgroundTint="#e8f0fe"
+            android:textColor="#1a73e8"
+            app:cornerRadius="16dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/capture_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/stream_card">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/capture_mb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:text="Static Image Mode"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:icon="@drawable/static_image_mode"
+            app:iconGravity="top"
+            app:iconPadding="16dp"
+            app:iconSize="48dp"
+            android:backgroundTint="#fce8e6"
+            android:textColor="#d93025"
+            app:cornerRadius="16dp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
